@@ -364,9 +364,11 @@ footer .logo img {
     padding: 35px 0 0;
 }
 .promo .wrap img {
-    position: absolute;
+    position:absolute;
     bottom: 0;
-    right: 18px;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .promo-title {
     font-size: 55px;
@@ -414,4 +416,13 @@ footer .logo img {
 }
 .promo-link:hover {
     color: #c9f9f0;
+}
+@media (max-width: 479px){
+    body {
+        word-wrap: break-word;
+    }
+    .simple p {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
