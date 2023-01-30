@@ -35,7 +35,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  
 public class Excel {
     public static void reporte() {
-        Excel mc = new Excel(); 
+        //Excel mc = new Excel(); 
         Workbook book = new XSSFWorkbook();
         Sheet sheet = book.createSheet("Productos");
  
@@ -44,19 +44,19 @@ public class Excel {
             byte[] bytes = IOUtils.toByteArray(is);
             int imgIndex = book.addPicture(bytes, Workbook.PICTURE_TYPE_PNG);
             is.close();*/
-            InputStream is = mc.getClass().getResourceAsStream("/img/proyecto.png");
+            /*InputStream is = mc.getClass().getResourceAsStream("/img/proyecto.png");
             byte[] bytes = IOUtils.toByteArray(is);
             int imgIndex = book.addPicture(bytes, Workbook.PICTURE_TYPE_PNG);
-            is.close();
+            is.close();*/
  
-            CreationHelper help = book.getCreationHelper();
+            /*CreationHelper help = book.getCreationHelper();
             Drawing draw = sheet.createDrawingPatriarch();
  
             ClientAnchor anchor = help.createClientAnchor();
             anchor.setCol1(0);
             anchor.setRow1(1);
             Picture pict = draw.createPicture(anchor, imgIndex);
-            pict.resize(1, 3);
+            pict.resize(1, 3);*/
  
             CellStyle tituloEstilo = book.createCellStyle();
             tituloEstilo.setAlignment(HorizontalAlignment.CENTER);

@@ -35,12 +35,12 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  
 public class ExcelVentas {
     public static void reporteVentas() {
-        ExcelVentas nv =new ExcelVentas();
+        //ExcelVentas nv =new ExcelVentas();
         Workbook book = new XSSFWorkbook();
         Sheet sheet = book.createSheet("Ventas");
  
         try {
-            InputStream is = nv.getClass().getResourceAsStream("/img/proyecto.png");
+            /*InputStream is = nv.getClass().getResourceAsStream("/img/proyecto.png");
             byte[] bytes = IOUtils.toByteArray(is);
             int imgIndex = book.addPicture(bytes, Workbook.PICTURE_TYPE_PNG);
             is.close();
@@ -52,7 +52,7 @@ public class ExcelVentas {
             anchor.setCol1(0);
             anchor.setRow1(1);
             Picture pict = draw.createPicture(anchor, imgIndex);
-            pict.resize(1, 3);
+            pict.resize(1, 3);*/
  
             CellStyle tituloEstilo = book.createCellStyle();
             tituloEstilo.setAlignment(HorizontalAlignment.CENTER);
