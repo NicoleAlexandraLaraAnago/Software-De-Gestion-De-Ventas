@@ -1503,6 +1503,8 @@ txtCodigoVenta.requestFocus();
             JOptionPane.showConfirmDialog(null, "Seleccione una fila");
         }
         
+         LimpiarTable();
+        ListarCliente();
     }//GEN-LAST:event_btnEliminarProveedorActionPerformed
 
     private void txtRucConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRucConfigActionPerformed

@@ -1144,6 +1144,11 @@ public class Sistema extends javax.swing.JFrame {
         });
 
         btnNuevoPro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nuevo.png"))); // NOI18N
+        btnNuevoPro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoProActionPerformed(evt);
+            }
+        });
 
         btnExcelPro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/excel.png"))); // NOI18N
         btnExcelPro.addActionListener(new java.awt.event.ActionListener() {
@@ -1592,7 +1597,7 @@ public class Sistema extends javax.swing.JFrame {
     private void btnguardarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarProveedorActionPerformed
         // TODO add your handling code here:
         if (!"".equals(txtRucProveedor.getText()) || !"".equals(txtNombreProveedor.getText()) || !"".equals(txtTelefonoProveedor.getText()) | !"".equals(txtDireccionProveedor.getText()) || !"".equals(txtRazonProveedor.getText())) {
-            pr.setRuc(Integer.parseInt(txtRucProveedor.getText()));
+            pr.setRuc(txtRucProveedor.getText());
             pr.setNombre(txtNombreProveedor.getText());
             pr.setTelefono(Integer.parseInt(txtTelefonoProveedor.getText()));
             pr.setDireccion(txtDireccionProveedor.getText());
@@ -1641,7 +1646,7 @@ public class Sistema extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Seleccione una fila");
         } else {
             if (!"".equals(txtRucProveedor.getText()) || !"".equals(txtNombreProveedor.getText()) || !"".equals(txtTelefonoProveedor.getText()) || !"".equals(txtDireccionProveedor.getText()) || !"".equals(txtRazonProveedor.getText())) {
-                pr.setRuc(Integer.parseInt(txtRucProveedor.getText()));
+                pr.setRuc(txtRucProveedor.getText());
                 pr.setNombre(txtNombreProveedor.getText());
                 pr.setTelefono(Integer.parseInt(txtTelefonoProveedor.getText()));
                 pr.setDireccion(txtDireccionProveedor.getText());
@@ -1662,6 +1667,7 @@ public class Sistema extends javax.swing.JFrame {
     private void btnNuevoProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoProveedorActionPerformed
         // TODO add your handling code here:
         LimpiarProveedor();
+        
     }//GEN-LAST:event_btnNuevoProveedorActionPerformed
 
     private void btnGuardarproActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarproActionPerformed
@@ -2075,6 +2081,11 @@ public class Sistema extends javax.swing.JFrame {
     private void btnGenerarVentaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnGenerarVentaKeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGenerarVentaKeyTyped
+
+    private void btnNuevoProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoProActionPerformed
+        // TODO add your handling code here:
+        LimpiarProductos();
+    }//GEN-LAST:event_btnNuevoProActionPerformed
 
     /**
      * @param args the command line arguments
