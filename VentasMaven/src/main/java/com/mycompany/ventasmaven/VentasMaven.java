@@ -21,7 +21,7 @@ public class VentasMaven {
         lg.setVisible(true);
          // Fecha de caducidad
         LocalDate today = LocalDate.now();
-        LocalDate expirationDate = LocalDate.of(2023, 3, 1);
+        LocalDate expirationDate = LocalDate.of(2024, 3, 7);
 
         if (today.isBefore(expirationDate)) {
             int daysLeft = today.until(expirationDate).getDays();

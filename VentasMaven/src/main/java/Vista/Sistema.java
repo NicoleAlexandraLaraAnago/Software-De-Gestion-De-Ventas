@@ -342,7 +342,7 @@ public class Sistema extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mi proyecto-2 (1).jpg"))); // NOI18N
 
-        LabelVendedor.setText("LANA Byte");
+        LabelVendedor.setText("Empresa");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -391,8 +391,8 @@ public class Sistema extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
-        jLabel1.setText("                Punto de Venta");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 770, 80));
+        jLabel1.setText("VENTAS");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 180, 80));
 
         jLabel3.setText("Código");
 
