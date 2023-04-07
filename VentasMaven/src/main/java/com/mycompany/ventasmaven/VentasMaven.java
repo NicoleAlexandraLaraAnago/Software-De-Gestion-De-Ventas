@@ -20,7 +20,7 @@ public class VentasMaven {
         Login lg = new Login();
         lg.setVisible(true);
          // Fecha de caducidad
-        LocalDate today = LocalDate.now();
+       /* LocalDate today = LocalDate.now();
         LocalDate expirationDate = LocalDate.of(2024, 3, 7);
 
         if (today.isBefore(expirationDate)) {
@@ -30,6 +30,6 @@ public class VentasMaven {
         } else {
             System.out.println("El período de prueba ha expirado. Por favor, compre una licencia para seguir usando el programa.");
            System.exit(0); // Aquí iría el código para mostrar un mensaje informando al usuario que debe comprar una licencia para seguir usando el programa
-        }
+        }*/
     }
 }

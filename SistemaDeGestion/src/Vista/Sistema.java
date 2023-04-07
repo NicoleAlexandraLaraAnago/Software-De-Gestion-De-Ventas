@@ -347,7 +347,7 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mi proyecto-2 (1).jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ventas.png"))); // NOI18N
 
         LabelVendedor.setText("NombreEmpresa");
 
@@ -363,24 +363,23 @@ public class Sistema extends javax.swing.JFrame {
                         .addComponent(btnProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(bntProveedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnNuevaVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 170, Short.MAX_VALUE))
+                        .addComponent(btnNuevaVenta, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(LabelVendedor))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(LabelVendedor)))))
+                        .addComponent(jLabel2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(jLabel2)
                 .addGap(2, 2, 2)
                 .addComponent(LabelVendedor)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnNuevaVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(btnClientes)
@@ -725,7 +724,7 @@ public class Sistema extends javax.swing.JFrame {
 
         btnGuardarCliente.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         btnGuardarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/GuardarTodo.png"))); // NOI18N
-        btnGuardarCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnGuardarCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnGuardarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarClienteActionPerformed(evt);
@@ -734,7 +733,7 @@ public class Sistema extends javax.swing.JFrame {
 
         btnEditarCliente.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         btnEditarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Actualizar (2).png"))); // NOI18N
-        btnEditarCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEditarCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEditarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarClienteActionPerformed(evt);
@@ -743,7 +742,7 @@ public class Sistema extends javax.swing.JFrame {
 
         btnEliminarCliente.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         btnEliminarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
-        btnEliminarCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliminarCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEliminarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarClienteActionPerformed(evt);
@@ -752,7 +751,7 @@ public class Sistema extends javax.swing.JFrame {
 
         btnNuevoCliente.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         btnNuevoCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nuevo.png"))); // NOI18N
-        btnNuevoCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNuevoCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnNuevoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoClienteActionPerformed(evt);
@@ -1324,6 +1323,13 @@ public class Sistema extends javax.swing.JFrame {
             }
         });
 
+        txtTelefonoConfig.setText("0");
+        txtTelefonoConfig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonoConfigActionPerformed(evt);
+            }
+        });
+
         jLabel30.setText("DIRECCIÓN ");
 
         jLabel31.setText("RAZÓN SOCIAL");
@@ -1581,7 +1587,7 @@ txtCodigoVenta.requestFocus();
     private void btnguardarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarProveedorActionPerformed
         // TODO add your handling code here:
         if (!"".equals(txtRucProveedor.getText()) || !"".equals(txtNombreProveedor.getText()) || !"".equals(txtTelefonoProveedor.getText()) | !"".equals(txtDireccionProveedor.getText()) || !"".equals(txtRazonProveedor.getText())) {
-            pr.setRuc(Integer.parseInt(txtRucProveedor.getText()));
+            pr.setRuc(txtRucProveedor.getText());
             pr.setNombre(txtNombreProveedor.getText());
             pr.setTelefono(Integer.parseInt(txtTelefonoProveedor.getText()));
             pr.setDireccion(txtDireccionProveedor.getText());
@@ -1630,7 +1636,7 @@ txtCodigoVenta.requestFocus();
             JOptionPane.showMessageDialog(null, "Seleccione una fila");
         } else {
             if (!"".equals(txtRucProveedor.getText()) || !"".equals(txtNombreProveedor.getText()) || !"".equals(txtTelefonoProveedor.getText()) || !"".equals(txtDireccionProveedor.getText()) || !"".equals(txtRazonProveedor.getText())) {
-                pr.setRuc(Integer.parseInt(txtRucProveedor.getText()));
+                pr.setRuc(txtRucProveedor.getText());
                 pr.setNombre(txtNombreProveedor.getText());
                 pr.setTelefono(Integer.parseInt(txtTelefonoProveedor.getText()));
                 pr.setDireccion(txtDireccionProveedor.getText());
@@ -1975,9 +1981,9 @@ txtCodigoVenta.requestFocus();
     private void btnActualizarConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarConfigActionPerformed
         // TODO add your handling code here:
         if (!"".equals((txtRucConfig.getText())) || !"".equals(txtNombreConfig.getText()) || !"".equals(txtTelefonoConfig.getText())|| !"".equals(txtDireccionConfig.getText())|| !"".equals(txtRazonConfig.getText())) {
-                conf.setRuc(Integer.parseInt(txtRucConfig.getText()));
+                conf.setRuc(txtRucConfig.getText());
                 conf.setNombre(txtNombreConfig.getText());
-                conf.setTelefono(Integer.parseInt(txtTelefonoConfig.getText()));
+                conf.setTelefono(txtTelefonoConfig.getText());
                 conf.setDireccion(txtDireccionConfig.getText());
                 conf.setRazon(txtRazonConfig.getText());
                 conf.setId(Integer.parseInt(txtIdConfig.getText()));
@@ -2050,6 +2056,10 @@ txtCodigoVenta.requestFocus();
     private void txtDesProKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDesProKeyReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDesProKeyReleased
+
+    private void txtTelefonoConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoConfigActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefonoConfigActionPerformed
 
     
     
@@ -2313,7 +2323,7 @@ private void pdf(){
         Document doc =new Document ();
         PdfWriter.getInstance(doc,archivo);
         doc.open();
-        Image img = Image.getInstance("src/img/torta.png");
+       // Image img = Image.getInstance("src/img/torta.png");
         
         Paragraph fecha = new Paragraph();
         Font negrita = new Font(Font.FontFamily.TIMES_ROMAN,12,Font.BOLD,BaseColor.BLUE);
@@ -2331,7 +2341,7 @@ private void pdf(){
         Encabezado.setWidths(columnaEncabezado);
         Encabezado.setHorizontalAlignment(Element.ALIGN_LEFT);
         
-        Encabezado.addCell(img);
+        //Encabezado.addCell(img);
         
         /*String ruc = "1234567";
         String nom = "NICOLE Y MICHELLE";
@@ -2394,10 +2404,10 @@ private void pdf(){
         pro2.setBorder(0);
         pro3.setBorder(0);
         pro4.setBorder(0);
-        pro1.setBackgroundColor(BaseColor.DARK_GRAY);
-        pro2.setBackgroundColor(BaseColor.DARK_GRAY);
-        pro3.setBackgroundColor(BaseColor.DARK_GRAY);
-        pro4.setBackgroundColor(BaseColor.DARK_GRAY);
+        pro1.setBackgroundColor(BaseColor.LIGHT_GRAY);
+        pro2.setBackgroundColor(BaseColor.LIGHT_GRAY);
+        pro3.setBackgroundColor(BaseColor.LIGHT_GRAY);
+        pro4.setBackgroundColor(BaseColor.LIGHT_GRAY);
         tablapro.addCell(pro1);
         tablapro.addCell(pro2);
         tablapro.addCell(pro3);
@@ -2424,7 +2434,7 @@ private void pdf(){
         Paragraph firma = new Paragraph();
         firma.add(Chunk.NEWLINE);
         firma.add("Cancelacion y Firma\n\n))");
-        firma.add("--------------------------)");
+        firma.add("____________________");
         firma.setAlignment(Element.ALIGN_CENTER);
         doc.add(firma);
         

@@ -3,16 +3,16 @@ package Modelo;
 
 public class Config {
     private int id;
-    private int ruc;
+    private String ruc;
     private String nombre;
-    private int telefono;
+    private String telefono;
     private String direccion;
     private String razon;
 
     public Config() {
     }
 
-    public Config(int id, int ruc, String nombre, int telefono, String direccion, String razon) {
+    public Config(int id, String ruc, String nombre, String telefono, String direccion, String razon) {
         this.id = id;
         this.ruc = ruc;
         this.nombre = nombre;
@@ -29,11 +29,11 @@ public class Config {
         this.id = id;
     }
 
-    public int getRuc() {
+    public String getRuc() {
         return ruc;
     }
 
-    public void setRuc(int ruc) {
+    public void setRuc(String ruc) {
         this.ruc = ruc;
     }
 
@@ -45,11 +45,11 @@ public class Config {
         this.nombre = nombre;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 

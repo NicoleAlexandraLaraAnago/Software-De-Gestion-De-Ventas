@@ -152,9 +152,9 @@ return Listapro;
         
         if(rs.next ()){
         conf.setId(rs.getInt("id"));
-        conf.setRuc(rs.getInt("ruc"));
+        conf.setRuc(rs.getString("ruc"));
         conf.setNombre(rs.getString("nombre"));
-        conf.setTelefono(rs.getInt("telefono"));
+        conf.setTelefono(rs.getString("telefono"));
         conf.setDireccion(rs.getString("direccion"));
         conf.setRazon(rs.getString("razon"));
         }
@@ -169,9 +169,9 @@ return Listapro;
     String sql = "UPDATE config SET ruc=?,nombre=?,telefono=?, direccion=?,razon=? WHERE id=?";
     try{
         ps=con.prepareStatement(sql);
-        ps.setInt(1, conf.getRuc());
+        ps.setString(1, conf.getRuc());
         ps.setString(2, conf.getNombre());
-        ps.setInt(3, conf.getTelefono());
+        ps.setString(3, conf.getTelefono());
         ps.setString(4, conf.getDireccion());
         ps.setString(5, conf.getRazon());
         ps.setInt(6, conf.getId());

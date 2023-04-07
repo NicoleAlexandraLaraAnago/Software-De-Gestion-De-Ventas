@@ -40,11 +40,10 @@ public class Excel {
         Sheet sheet = book.createSheet("Productos");
  
         try {
-            InputStream is = new FileInputStream("src/img/Mi proyecto-2 (1).jpg");
+            InputStream is = new FileInputStream("src/img/ventas.png");
             byte[] bytes = IOUtils.toByteArray(is);
             int imgIndex = book.addPicture(bytes, Workbook.PICTURE_TYPE_PNG);
             is.close();
- 
             CreationHelper help = book.getCreationHelper();
             Drawing draw = sheet.createDrawingPatriarch();
  

@@ -11,7 +11,7 @@ package Modelo;
  */
 public class Proveedor {
     private int id;
-    private int ruc;
+    private String ruc;
     private String nombre;
     private int telefono;
     private String direccion;
@@ -21,7 +21,7 @@ public class Proveedor {
         
     }
 
-    public Proveedor(int id, int ruc, String nombre, int telefono, String direccion, String razon) {
+    public Proveedor(int id, String ruc, String nombre, int telefono, String direccion, String razon) {
         this.id = id;
         this.ruc = ruc;
         this.nombre = nombre;
@@ -38,11 +38,11 @@ public class Proveedor {
         this.id = id;
     }
 
-    public int getRuc() {
+    public String getRuc() {
         return ruc;
     }
 
-    public void setRuc(int ruc) {
+    public void setRuc(String ruc) {
         this.ruc = ruc;
     }
 
